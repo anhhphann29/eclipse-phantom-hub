@@ -4,17 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>Eclipse Phantom Hub | Script Roblox Vietnam Training PvP</title>
-
+    <meta name="description" content="Eclipse Phantom Hub - Script Freemium Roblox mạnh nhất cho Vietnam Training PvP. Aimlock, ESP, Hitbox, Auto Farm Boss, Teleport, Server Hop. Hỗ trợ PC & Mobile.">
+    <meta name="theme-color" content="#7e22ce">
+    <meta property="og:title" content="Eclipse Phantom Hub | Script Roblox Vietnam Training PvP">
+    <meta property="og:description" content="Script Freemium Roblox mạnh nhất cho Vietnam Training PvP. Aimlock, ESP, Hitbox, Auto Farm Boss, Teleport.">
+    <meta property="og:type" content="website">
+    
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..900&family=JetBrains+Mono:wght@400;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
-    <!-- AOS -->
+    <!-- AOS Animation Library -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-
-    <!-- Tailwind -->
+    
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -38,30 +43,49 @@
                         'float-slow': 'float 8s ease-in-out 2s infinite',
                         'float-delayed': 'float 7s ease-in-out 4s infinite',
                         'glow': 'glow 3s ease-in-out infinite',
-                        'glow-slow': 'glow 5s ease-in-out infinite',
+                        'glow-strong': 'glowStrong 2s ease-in-out infinite',
                         'slide-up': 'slideUp 0.8s cubic-bezier(0.16,1,0.3,1) forwards',
+                        'slide-down': 'slideDown 0.6s cubic-bezier(0.16,1,0.3,1) forwards',
+                        'slide-left': 'slideLeft 0.8s cubic-bezier(0.16,1,0.3,1) forwards',
+                        'slide-right': 'slideRight 0.8s cubic-bezier(0.16,1,0.3,1) forwards',
                         'fade-in': 'fadeIn 1s ease forwards',
+                        'fade-in-up': 'fadeInUp 0.8s cubic-bezier(0.16,1,0.3,1) forwards',
                         'bounce-gentle': 'bounceGentle 2s ease-in-out infinite',
+                        'bounce-in': 'bounceIn 0.6s cubic-bezier(0.16,1,0.3,1) forwards',
                         'spin-slow': 'spin 25s linear infinite',
                         'gradient': 'gradient 6s ease infinite',
-                        'marquee': 'marquee 40s linear infinite',
                         'ping-slow': 'ping 3s cubic-bezier(0, 0, 0.2, 1) infinite',
                         'scale-in': 'scaleIn 0.5s cubic-bezier(0.16,1,0.3,1) forwards',
+                        'pulse-soft': 'pulseSoft 2s cubic-bezier(0.4,0,0.6,1) infinite',
+                        'shake': 'shake 0.5s ease-in-out',
+                        'flip-in': 'flipIn 0.8s cubic-bezier(0.16,1,0.3,1) forwards',
+                        'rotate-in': 'rotateIn 0.8s cubic-bezier(0.16,1,0.3,1) forwards',
+                        'border-glow-anim': 'borderGlow 3s ease-in-out infinite',
                     },
                     keyframes: {
                         float: { '0%,100%': { transform: 'translateY(0) rotate(0deg)' }, '50%': { transform: 'translateY(-30px) rotate(5deg)' } },
                         glow: { '0%,100%': { boxShadow: '0 0 25px rgba(168,85,247,0.15), 0 0 50px rgba(168,85,247,0.05)' }, '50%': { boxShadow: '0 0 50px rgba(168,85,247,0.4), 0 0 100px rgba(168,85,247,0.15)' } },
+                        glowStrong: { '0%,100%': { boxShadow: '0 0 30px rgba(168,85,247,0.3), 0 0 60px rgba(168,85,247,0.1)' }, '50%': { boxShadow: '0 0 60px rgba(168,85,247,0.6), 0 0 120px rgba(168,85,247,0.25)' } },
                         slideUp: { '0%': { transform: 'translateY(60px)', opacity: '0' }, '100%': { transform: 'translateY(0)', opacity: '1' } },
+                        slideDown: { '0%': { transform: 'translateY(-40px)', opacity: '0' }, '100%': { transform: 'translateY(0)', opacity: '1' } },
+                        slideLeft: { '0%': { transform: 'translateX(60px)', opacity: '0' }, '100%': { transform: 'translateX(0)', opacity: '1' } },
+                        slideRight: { '0%': { transform: 'translateX(-60px)', opacity: '0' }, '100%': { transform: 'translateX(0)', opacity: '1' } },
                         fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+                        fadeInUp: { '0%': { transform: 'translateY(30px)', opacity: '0' }, '100%': { transform: 'translateY(0)', opacity: '1' } },
                         bounceGentle: { '0%,100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-15px)' } },
+                        bounceIn: { '0%': { transform: 'scale(0.3)', opacity: '0' }, '50%': { transform: 'scale(1.05)' }, '70%': { transform: 'scale(0.9)' }, '100%': { transform: 'scale(1)', opacity: '1' } },
                         gradient: { '0%,100%': { backgroundPosition: '0% 50%' }, '50%': { backgroundPosition: '100% 50%' } },
-                        marquee: { '0%': { transform: 'translateX(0)' }, '100%': { transform: 'translateX(-50%)' } },
-                        scaleIn: { '0%': { transform: 'scale(0.9)', opacity: '0' }, '100%': { transform: 'scale(1)', opacity: '1' } },
+                        scaleIn: { '0%': { transform: 'scale(0.8)', opacity: '0' }, '100%': { transform: 'scale(1)', opacity: '1' } },
+                        pulseSoft: { '0%,100%': { opacity: '1' }, '50%': { opacity: '0.6' } },
+                        shake: { '0%,100%': { transform: 'translateX(0)' }, '10%,30%,50%,70%,90%': { transform: 'translateX(-4px)' }, '20%,40%,60%,80%': { transform: 'translateX(4px)' } },
+                        flipIn: { '0%': { transform: 'perspective(400px) rotateY(90deg)', opacity: '0' }, '40%': { transform: 'perspective(400px) rotateY(-10deg)' }, '70%': { transform: 'perspective(400px) rotateY(10deg)' }, '100%': { transform: 'perspective(400px) rotateY(0)', opacity: '1' } },
+                        rotateIn: { '0%': { transform: 'rotate(-180deg) scale(0)', opacity: '0' }, '100%': { transform: 'rotate(0) scale(1)', opacity: '1' } },
+                        borderGlow: { '0%,100%': { borderColor: 'rgba(168,85,247,0.2)' }, '50%': { borderColor: 'rgba(168,85,247,0.6)' } },
                     },
                     backgroundImage: {
                         'grid': 'linear-gradient(rgba(168,85,247,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(168,85,247,0.02) 1px, transparent 1px)',
-                        'radial-top': 'radial-gradient(ellipse at 50% 0%, rgba(168,85,247,0.12) 0%, transparent 60%)',
-                        'radial-center': 'radial-gradient(circle at 50% 50%, rgba(168,85,247,0.06) 0%, transparent 50%)',
+                        'radial-top': 'radial-gradient(ellipse at 50% 0%, rgba(168,85,247,0.15) 0%, transparent 60%)',
+                        'radial-center': 'radial-gradient(circle at 50% 50%, rgba(168,85,247,0.08) 0%, transparent 50%)',
                     },
                 }
             }
@@ -69,149 +93,199 @@
     </script>
 
     <style>
-        /* ===== CORE ===== */
         * { scrollbar-width: thin; scrollbar-color: #a855f7 #0a0a0f; }
         *::-webkit-scrollbar { width: 5px; }
         *::-webkit-scrollbar-track { background: #0a0a0f; }
         *::-webkit-scrollbar-thumb { background: #a855f7; border-radius: 10px; }
         
         body { background: #0a0a0f; color: #e9d5ff; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        html { scroll-behavior: smooth; }
         
-        /* ===== GLASS ===== */
         .glass { background: rgba(17,17,25,0.65); backdrop-filter: blur(24px) saturate(180%); -webkit-backdrop-filter: blur(24px) saturate(180%); border: 1px solid rgba(168,85,247,0.08); }
-        .glass-strong { background: rgba(10,10,15,0.85); backdrop-filter: blur(30px) saturate(200%); -webkit-backdrop-filter: blur(30px) saturate(200%); border: 1px solid rgba(168,85,247,0.12); }
+        .glass-strong { background: rgba(10,10,15,0.88); backdrop-filter: blur(30px) saturate(200%); -webkit-backdrop-filter: blur(30px) saturate(200%); border: 1px solid rgba(168,85,247,0.12); }
         
-        /* ===== GRADIENT TEXT ===== */
         .text-glow { background: linear-gradient(135deg, #a855f7, #c084fc, #a855f7); background-size: 200% 200%; animation: gradient 6s ease infinite; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
         
-        /* ===== CARD PREMIUM ===== */
         .card-premium { transition: all 0.5s cubic-bezier(0.16,1,0.3,1); position: relative; overflow: hidden; }
-        .card-premium::after { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 50% 0%, rgba(168,85,247,0.08) 0%, transparent 70%); opacity: 0; transition: opacity 0.4s; }
+        .card-premium::after { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at var(--mx,50%) var(--my,50%), rgba(168,85,247,0.12) 0%, transparent 70%); opacity: 0; transition: opacity 0.4s; }
         .card-premium:hover::after { opacity: 1; }
-        .card-premium:hover { transform: translateY(-10px); box-shadow: 0 30px 60px -15px rgba(168,85,247,0.3); border-color: rgba(168,85,247,0.4); }
+        .card-premium:hover { transform: translateY(-10px); box-shadow: 0 30px 60px -15px rgba(168,85,247,0.35); border-color: rgba(168,85,247,0.45); }
         
-        /* ===== TOAST ===== */
         .toast-enter { animation: toastIn 0.5s cubic-bezier(0.16,1,0.3,1); }
         .toast-exit { animation: toastOut 0.4s ease-in forwards; }
         @keyframes toastIn { from { transform: translateX(120%) scale(0.9); opacity: 0; } to { transform: translateX(0) scale(1); opacity: 1; } }
         @keyframes toastOut { from { transform: translateX(0) scale(1); opacity: 1; } to { transform: translateX(120%) scale(0.9); opacity: 0; } }
         
-        /* ===== PARTICLES ===== */
         .particle { position: absolute; border-radius: 50%; animation: particleFloat 5s ease-in infinite; opacity: 0; pointer-events: none; }
         @keyframes particleFloat { 0% { transform: translateY(105vh) scale(0); opacity: 0; } 10% { opacity: 0.8; } 90% { opacity: 0.8; } 100% { transform: translateY(-10vh) scale(1); opacity: 0; } }
         
-        /* ===== TERMINAL ===== */
         .cursor::after { content: '▋'; animation: blink 1s step-end infinite; color: #a855f7; }
         @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
         
-        /* ===== MOBILE ===== */
         @media (max-width: 640px) { .text-fluid { font-size: clamp(2.5rem, 12vw, 5rem) !important; } }
+
+        .hover-lift { transition: all 0.4s cubic-bezier(0.16,1,0.3,1); }
+        .hover-lift:hover { transform: translateY(-6px); box-shadow: 0 25px 50px -12px rgba(168,85,247,0.3); }
     </style>
 </head>
 <body class="antialiased">
 
-<!-- ===== PARTICLES ===== -->
 <div id="particles" class="fixed inset-0 z-0 overflow-hidden pointer-events-none"></div>
-
-<!-- ===== TOAST ===== -->
 <div id="toast-container" class="fixed top-4 right-4 z-[9999] flex flex-col gap-3 max-w-[90vw]"></div>
 
-<!-- ===== NAV ===== -->
-<nav class="fixed top-3 inset-x-3 z-50 glass rounded-2xl px-5 py-3.5 flex items-center justify-between shadow-2xl max-w-4xl mx-auto transition-all duration-300 hover:border-border-glow">
+<!-- NAV -->
+<nav class="fixed top-3 inset-x-3 z-50 glass rounded-2xl px-5 py-3.5 flex items-center justify-between shadow-2xl max-w-4xl mx-auto transition-all duration-500 animate-slide-down" id="navbar">
     <span class="text-glow font-bold text-xl whitespace-nowrap tracking-tight">🔥 Eclipse Phantom</span>
     <div class="hidden md:flex items-center gap-6 text-sm font-medium">
-        <a href="#features" class="text-text-dim hover:text-white transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full">Tính năng</a>
-        <a href="#guide" class="text-text-dim hover:text-white transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full">Hướng dẫn</a>
-        <a href="#script" class="text-text-dim hover:text-white transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full">Script</a>
-        <a href="#faq" class="text-text-dim hover:text-white transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full">FAQ</a>
+        <a href="#features" class="text-text-dim hover:text-white transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full">Tính năng</a>
+        <a href="#guide" class="text-text-dim hover:text-white transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full">Hướng dẫn</a>
+        <a href="#script" class="text-text-dim hover:text-white transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full">Script</a>
+        <a href="#faq" class="text-text-dim hover:text-white transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full">FAQ</a>
     </div>
-    <button onclick="copyScript()" class="bg-primary hover:bg-primary-600 text-white font-bold px-6 py-3 rounded-xl text-sm transition-all animate-glow whitespace-nowrap hover:scale-105 active:scale-95">📋 Get Script</button>
+    <button onclick="copyScript()" class="bg-primary hover:bg-primary-600 text-white font-bold px-6 py-3 rounded-xl text-sm transition-all duration-300 animate-glow-strong whitespace-nowrap hover:scale-105 active:scale-95">📋 Get Script</button>
 </nav>
 
-<!-- ===== HERO ===== -->
+<!-- HERO -->
 <section class="relative min-h-screen flex items-center justify-center px-4 pt-32 pb-24">
     <div class="absolute inset-0 bg-grid bg-[length:60px_60px] opacity-30"></div>
     <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[800px] bg-radial-top opacity-60"></div>
-
     <div class="absolute top-28 left-[6%] text-5xl animate-float opacity-20 hidden lg:block select-none">⚔️</div>
     <div class="absolute top-48 right-[10%] text-4xl animate-float-slow opacity-20 hidden lg:block select-none">🎯</div>
     <div class="absolute bottom-40 left-[12%] text-6xl animate-float-delayed opacity-15 hidden lg:block select-none">👹</div>
     <div class="absolute bottom-24 right-[6%] text-4xl animate-float opacity-20 hidden lg:block select-none">💉</div>
 
-    <div class="relative z-10 text-center max-w-5xl" data-aos="fade-up" data-aos-duration="1200">
-        <div class="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full glass mb-10 animate-scale-in" data-aos="zoom-in" data-aos-delay="200">
+    <div class="relative z-10 text-center max-w-5xl animate-fade-in">
+        <div class="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full glass mb-10 animate-scale-in" style="animation-delay: 0.2s;">
             <span class="relative flex h-3 w-3">
                 <span class="animate-ping-slow absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                 <span class="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
             </span>
             <span class="text-xs text-text-dim font-semibold tracking-wide">v2.0</span>
             <span class="text-text-muted">•</span>
-            <span class="text-xs text-primary font-bold">Vietnam Training PvP</span>
+            <span class="text-xs text-primary font-bold">Freemium</span>
             <span class="text-text-muted">•</span>
             <span class="text-xs text-text-dim">PC & Mobile</span>
         </div>
 
-        <h1 class="text-fluid text-6xl md:text-8xl lg:text-9xl font-black leading-none tracking-tighter mb-6" data-aos="fade-up" data-aos-delay="400">
+        <h1 class="text-fluid text-6xl md:text-8xl lg:text-9xl font-black leading-none tracking-tighter mb-6 animate-slide-up" style="animation-delay: 0.4s;">
             <span class="text-glow">Eclipse</span><br>
             <span class="text-white">Phantom Hub</span>
         </h1>
 
-        <p class="text-xl md:text-2xl text-text-dim mb-6 font-medium" data-aos="fade-up" data-aos-delay="600">by <span class="text-primary font-bold">Tzyy.eclipsephantom</span></p>
+        <p class="text-xl md:text-2xl text-text-dim mb-6 font-medium animate-slide-up" style="animation-delay: 0.6s;">by <span class="text-primary font-bold">Tzyy.eclipsephantom</span></p>
 
-        <p class="text-lg md:text-2xl text-text-dim max-w-3xl mx-auto mb-14 leading-relaxed" data-aos="fade-up" data-aos-delay="800">
-            Script Roblox <span class="text-white font-bold">mạnh nhất</span> cho Vietnam Training PvP.<br class="hidden md:block">
-            <span class="text-white/80">Aimlock • ESP • Hitbox • Auto Farm • Teleport • Server Hop</span><br>
-            <span class="text-primary font-semibold text-base mt-2 block">🔥 Miễn phí 100% • Hỗ trợ PC & Mobile</span>
+        <p class="text-lg md:text-2xl text-text-dim max-w-3xl mx-auto mb-6 leading-relaxed animate-slide-up" style="animation-delay: 0.8s;">
+            Script Roblox <span class="text-white font-bold">đỉnh nhất</span> cho Vietnam Training PvP<br class="hidden md:block">
+            <span class="text-white/80">Aimlock • ESP • Hitbox • Auto Farm • Teleport • Server Hop</span>
         </p>
 
-        <div class="flex flex-col md:flex-row gap-6 justify-center items-center" data-aos="fade-up" data-aos-delay="1000">
-            <button onclick="copyScript()" class="group relative w-full md:w-auto px-12 py-6 bg-primary hover:bg-primary-600 text-white font-extrabold text-xl rounded-2xl transition-all duration-500 animate-glow overflow-hidden shadow-2xl hover:scale-105 active:scale-95">
+        <!-- Freemium Badge -->
+        <div class="inline-flex items-center gap-3 px-6 py-3 rounded-2xl bg-primary/10 border border-primary/30 mb-10 animate-pulse-soft">
+            <span class="text-2xl">💎</span>
+            <span class="text-primary font-bold text-lg">Freemium</span>
+            <span class="text-text-dim">=</span>
+            <span class="text-white font-semibold">Free</span>
+            <span class="text-text-dim">+</span>
+            <span class="text-yellow-400 font-semibold">Premium</span>
+            <span class="text-text-dim text-sm">(Một số tính năng VIP cần mua)</span>
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-6 justify-center items-center animate-slide-up" style="animation-delay: 1s;">
+            <button onclick="copyScript()" class="group relative w-full md:w-auto px-12 py-6 bg-primary hover:bg-primary-600 text-white font-extrabold text-xl rounded-2xl transition-all duration-500 animate-glow-strong overflow-hidden shadow-2xl hover:scale-105 active:scale-95">
                 <span class="relative z-10 flex items-center justify-center gap-3">
                     <i class="fas fa-copy group-hover:scale-125 transition-transform duration-300 text-2xl"></i> 📋 Get Script
                 </span>
                 <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
             </button>
-            <a href="https://discord.gg/mxMTbr9MnD" target="_blank" class="w-full md:w-auto px-12 py-6 border-2 border-border-glow text-primary hover:bg-primary hover:text-white font-extrabold text-xl rounded-2xl transition-all duration-500 flex items-center justify-center gap-3" style="box-shadow: 0 0 0 1px rgba(168,85,247,0.2), 0 0 30px rgba(168,85,247,0.1);">
+            <a href="https://discord.gg/mxMTbr9MnD" target="_blank" class="w-full md:w-auto px-12 py-6 border-2 border-primary/40 text-primary hover:bg-primary hover:text-white font-extrabold text-xl rounded-2xl transition-all duration-500 flex items-center justify-center gap-3 hover-lift">
                 <i class="fab fa-discord text-2xl"></i> Join Discord
             </a>
         </div>
 
-        <div class="flex justify-center gap-12 md:gap-24 mt-20" data-aos="fade-up" data-aos-delay="1200">
-            <div class="text-center group cursor-default"><p class="text-5xl md:text-6xl font-black text-glow group-hover:scale-110 transition-transform">7</p><p class="text-xs text-text-dim mt-2 uppercase tracking-widest font-semibold">Tabs</p></div>
-            <div class="text-center group cursor-default"><p class="text-5xl md:text-6xl font-black text-glow group-hover:scale-110 transition-transform">25+</p><p class="text-xs text-text-dim mt-2 uppercase tracking-widest font-semibold">Features</p></div>
-            <div class="text-center group cursor-default"><p class="text-5xl md:text-6xl font-black text-glow group-hover:scale-110 transition-transform">∞</p><p class="text-xs text-text-dim mt-2 uppercase tracking-widest font-semibold">Updates</p></div>
-            <div class="text-center group cursor-default"><p class="text-5xl md:text-6xl font-black text-glow group-hover:scale-110 transition-transform">FREE</p><p class="text-xs text-text-dim mt-2 uppercase tracking-widest font-semibold">Forever</p></div>
+        <div class="flex justify-center gap-12 md:gap-24 mt-20 animate-fade-in-up" style="animation-delay: 1.2s;">
+            <div class="text-center group cursor-default"><p class="text-5xl md:text-6xl font-black text-glow group-hover:scale-110 transition-transform duration-300">7</p><p class="text-xs text-text-dim mt-2 uppercase tracking-widest font-semibold">Tabs</p></div>
+            <div class="text-center group cursor-default"><p class="text-5xl md:text-6xl font-black text-glow group-hover:scale-110 transition-transform duration-300">30+</p><p class="text-xs text-text-dim mt-2 uppercase tracking-widest font-semibold">Features</p></div>
+            <div class="text-center group cursor-default"><p class="text-5xl md:text-6xl font-black text-glow group-hover:scale-110 transition-transform duration-300">∞</p><p class="text-xs text-text-dim mt-2 uppercase tracking-widest font-semibold">Updates</p></div>
+            <div class="text-center group cursor-default"><p class="text-5xl md:text-6xl font-black text-glow group-hover:scale-110 transition-transform duration-300">💎</p><p class="text-xs text-text-dim mt-2 uppercase tracking-widest font-semibold">Freemium</p></div>
         </div>
     </div>
 </section>
 
-<!-- ===== FEATURES ===== -->
+<!-- FEATURES -->
 <section id="features" class="py-32 px-4 relative">
     <div class="absolute inset-0 bg-grid bg-[length:80px_80px] opacity-25"></div>
     <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-96 bg-radial-top opacity-50"></div>
 
     <div class="relative z-10 max-w-7xl mx-auto">
-        <div class="text-center mb-24" data-aos="fade-up">
-            <span class="text-primary font-bold text-[0.65rem] uppercase tracking-[0.4em] bg-primary/10 px-5 py-2.5 rounded-full border border-primary/20">Packed with Power</span>
-            <h2 class="text-5xl md:text-7xl font-black mt-8 mb-8"><span class="text-glow">✨ Mọi thứ</span> <span class="text-white">bạn cần</span></h2>
-            <p class="text-text-dim text-xl max-w-2xl mx-auto leading-relaxed">Script được tổ chức <span class="text-primary font-semibold">khoa học</span>, trực quan. <span class="text-white font-medium">Dễ dùng ngay cả lần đầu.</span></p>
+        <div class="text-center mb-24" data-aos="fade-up" data-aos-duration="800">
+            <span class="text-primary font-bold text-[0.65rem] uppercase tracking-[0.4em] bg-primary/10 px-5 py-2.5 rounded-full border border-primary/20 animate-pulse-soft">Packed with Power</span>
+            <h2 class="text-5xl md:text-7xl font-black mt-8 mb-8"><span class="text-glow">✨ Tất cả</span> <span class="text-white">tính năng</span></h2>
+            <p class="text-text-dim text-xl max-w-2xl mx-auto leading-relaxed"><span class="text-primary font-semibold">30+ tính năng</span> được tổ chức khoa học trong 7 tab. <span class="text-yellow-400 font-semibold">💎 VIP</span> đánh dấu tính năng Premium.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="features-grid">
             <script>
                 const features = [
-                    {icon:'👤',title:'Người Chơi',items:['Tốc độ chạy <span class="text-white font-semibold">16-50 studs/s</span> (Slider)','Nhảy vô hạn không cần chạm đất']},
-                    {icon:'⚔️',title:'PvP',items:['<span class="text-white font-semibold">Aimlock V1 & V2</span> (Dropdown chọn mục tiêu)','ESP máu + Hitbox <span class="text-white font-semibold">đổi màu theo HP</span>','Auto đánh, Auto băng gạc, Auto mua băng']},
-                    {icon:'👹',title:'Farm Boss',items:['Auto bám Boss (<span class="text-white font-semibold">khoảng cách & độ cao</span> tùy chỉnh)','Freecam xoay vòng quanh Boss','Hiện thanh máu Boss real-time']},
-                    {icon:'📍',title:'Địa Điểm / Auto',items:['<span class="text-white font-semibold">16 ghế AFK</span> + 8 vị trí câu cá','Khu chặt gỗ, Bệnh viện, Var Gang','Auto tìm & TP đến hòm thính']},
-                    {icon:'🌐',title:'Server',items:['Rejoin server <span class="text-white font-semibold">1 click</span>','Hop server <span class="text-white font-semibold">ít người nhất</span>','Load skin (/loadskin)']},
-                    {icon:'📋',title:'Info & Hỗ Trợ',items:['Báo lỗi qua <span class="text-white font-semibold">Webhook Discord</span>','Copy Discord, Owner, Co-Owner','Save/Load config <span class="text-white font-semibold">(SaveManager)</span>']}
+                    {
+                        icon:'👤',title:'Người Chơi',
+                        items:[
+                            '🏃 Tốc độ chạy <span class="text-white font-semibold">16-50 studs/s</span> (Slider)',
+                            '🦘 Nhảy vô hạn không cần chạm đất',
+                            '<span class="text-yellow-400 font-semibold">💎 VIP:</span> Tốc độ tối đa <span class="text-yellow-400 font-semibold">100 studs/s</span>'
+                        ]
+                    },
+                    {
+                        icon:'⚔️',title:'PvP',
+                        items:[
+                            '🎯 <span class="text-white font-semibold">Aimlock V1 & V2</span> (Dropdown chọn mục tiêu)',
+                            '❤️ ESP máu + 📦 Hitbox <span class="text-white font-semibold">đổi màu theo HP</span>',
+                            '⚔️ Auto đánh nhanh, 💉 Auto băng gạc',
+                            '🛒 Auto mua băng gạc (2 địa điểm)',
+                            '<span class="text-yellow-400 font-semibold">💎 VIP:</span> Aimlock <span class="text-yellow-400 font-semibold">Silent Aim</span>'
+                        ]
+                    },
+                    {
+                        icon:'👹',title:'Farm Boss',
+                        items:[
+                            '🤖 Auto bám Boss (khoảng cách & độ cao tùy chỉnh)',
+                            '📷 Freecam xoay vòng quanh Boss',
+                            '📊 Hiện thanh máu Boss real-time',
+                            '<span class="text-yellow-400 font-semibold">💎 VIP:</span> Auto <span class="text-yellow-400 font-semibold">Farm Boss Full Auto</span>'
+                        ]
+                    },
+                    {
+                        icon:'📍',title:'Địa Điểm / Auto',
+                        items:[
+                            '🪑 <span class="text-white font-semibold">16 ghế AFK</span> + 🎣 8 vị trí câu cá',
+                            '🪓 Khu chặt gỗ, 🏥 Bệnh viện, 🔫 Khu Var Gang',
+                            '📦 Auto tìm & TP đến hòm thính',
+                            '<span class="text-yellow-400 font-semibold">💎 VIP:</span> <span class="text-yellow-400 font-semibold">Auto Câu Cá</span> tự động'
+                        ]
+                    },
+                    {
+                        icon:'🌐',title:'Server',
+                        items:[
+                            '🔄 Rejoin server <span class="text-white font-semibold">1 click</span>',
+                            '🔍 Hop server <span class="text-white font-semibold">ít người nhất</span>',
+                            '👗 Load skin (/loadskin)',
+                            '<span class="text-yellow-400 font-semibold">💎 VIP:</span> <span class="text-yellow-400 font-semibold">Auto Hop</span> khi bị khóa'
+                        ]
+                    },
+                    {
+                        icon:'📋',title:'Info & Hỗ Trợ',
+                        items:[
+                            '🐛 Báo lỗi qua <span class="text-white font-semibold">Webhook Discord</span>',
+                            '📎 Copy Discord, Owner, Co-Owner',
+                            '💾 Save/Load config <span class="text-white font-semibold">(SaveManager)</span>',
+                            '<span class="text-yellow-400 font-semibold">💎 VIP:</span> <span class="text-yellow-400 font-semibold">Hỗ trợ ưu tiên</span> 24/7'
+                        ]
+                    }
                 ];
                 document.write(features.map((f,i)=>`
-                    <div class="card-premium glass rounded-3xl p-8 group" data-aos="fade-up" data-aos-delay="${i*100}" data-aos-duration="800">
-                        <div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-primary/20 group-hover:shadow-lg transition-all duration-500">${f.icon}</div>
+                    <div class="card-premium glass rounded-3xl p-8 group" data-aos="flip-left" data-aos-delay="${i*100}" data-aos-duration="800">
+                        <div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-primary/20 group-hover:shadow-lg group-hover:rotate-6 transition-all duration-500">${f.icon}</div>
                         <h3 class="text-2xl font-extrabold mb-5 text-white tracking-tight">${f.title}</h3>
-                        <ul class="space-y-3.5 text-text-dim leading-relaxed">${f.items.map(t=>`<li class="flex items-start gap-3"><span class="text-primary mt-1 text-lg font-bold">▹</span> <span>${t}</span></li>`).join('')}</ul>
+                        <ul class="space-y-3 text-text-dim leading-relaxed">${f.items.map(t=>`<li class="flex items-start gap-3 group-hover:translate-x-1 transition-transform duration-300"><span class="text-primary mt-1 text-sm font-bold">▹</span> <span>${t}</span></li>`).join('')}</ul>
                     </div>
                 `).join(''));
             </script>
@@ -219,30 +293,30 @@
     </div>
 </section>
 
-<!-- ===== HOW TO USE ===== -->
+<!-- HOW TO USE -->
 <section id="guide" class="py-32 px-4 bg-dark-50 relative overflow-hidden">
     <div class="absolute inset-0 bg-grid bg-[length:40px_40px] opacity-20"></div>
-    <div class="absolute -top-40 -right-40 w-80 h-80 bg-primary/5 rounded-full blur-3xl"></div>
-    <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-primary/5 rounded-full blur-3xl"></div>
+    <div class="absolute -top-40 -right-40 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse-soft"></div>
+    <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse-soft" style="animation-delay: 1s;"></div>
 
     <div class="relative z-10 max-w-6xl mx-auto">
-        <div class="text-center mb-24" data-aos="fade-up">
+        <div class="text-center mb-24" data-aos="fade-up" data-aos-duration="800">
             <span class="text-primary font-bold text-[0.65rem] uppercase tracking-[0.4em] bg-primary/10 px-5 py-2.5 rounded-full border border-primary/20">Quick Start</span>
             <h2 class="text-5xl md:text-7xl font-black mt-8 mb-8">📖 <span class="text-white">Cách sử dụng</span></h2>
-            <p class="text-text-dim text-xl">Chỉ <span class="text-primary font-extrabold text-2xl">4 bước</span> để bắt đầu hack!</p>
+            <p class="text-text-dim text-xl">Chỉ <span class="text-primary font-extrabold text-2xl animate-pulse-soft">4 bước</span> để bắt đầu hack!</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
             <script>
                 const steps = [
-                    {num:'1',title:'Tải Executor',desc:'<strong class="text-white">PC:</strong> KRNL, Fluxus, Solara<br><strong class="text-white">Mobile:</strong> Delta, Arceus X'},
-                    {num:'2',title:'Copy Script',desc:'Bấm nút <span class="text-primary font-bold">"Get Script"</span><br>để copy lệnh loadstring'},
-                    {num:'3',title:'Dán & Chạy',desc:'Dán script vào executor<br>bấm <span class="text-primary font-bold">Execute</span>'},
-                    {num:'K',title:'Bấm Phím K',desc:'Nhấn <span class="text-primary font-bold">phím K</span> để mở<br>menu hack trong game'}
+                    {num:'1',title:'Tải Executor',desc:'<strong class="text-white">PC:</strong> Solara, Velocity, Madium, Yub-X Hyperion<br><strong class="text-white">Mobile:</strong> Delta X'},
+                    {num:'2',title:'Copy Script',desc:'Bấm nút <span class="text-primary font-bold">"Get Script"</span> phía trên cùng để copy lệnh loadstring'},
+                    {num:'3',title:'Dán & Chạy',desc:'Dán script vào executor<br>bấm <span class="text-primary font-bold">Execute</span> để chạy'},
+                    {num:'K',title:'Mở Menu',desc:'Bấm <span class="text-primary font-bold">phím K</span> hoặc bấm vào <span class="text-primary font-bold">icon nổi</span> để mở menu trong game'}
                 ];
                 document.write(steps.map((s,i)=>`
                     <div class="text-center group" data-aos="zoom-in-up" data-aos-delay="${i*150}" data-aos-duration="600">
-                        <div class="w-28 h-28 rounded-[2rem] bg-primary/5 flex items-center justify-center mx-auto mb-8 text-5xl font-black text-primary border-2 border-primary/20 group-hover:bg-primary group-hover:text-white group-hover:scale-110 group-hover:border-primary group-hover:shadow-2xl group-hover:shadow-primary/30 transition-all duration-500">${s.num}</div>
+                        <div class="w-28 h-28 rounded-[2rem] bg-primary/5 flex items-center justify-center mx-auto mb-8 text-5xl font-black text-primary border-2 border-primary/20 group-hover:bg-primary group-hover:text-white group-hover:scale-110 group-hover:border-primary group-hover:shadow-2xl group-hover:shadow-primary/30 group-hover:rotate-6 transition-all duration-500">${s.num}</div>
                         <h3 class="font-extrabold text-2xl mb-4 text-white">${s.title}</h3>
                         <p class="text-text-dim text-base leading-relaxed">${s.desc}</p>
                     </div>
@@ -252,32 +326,33 @@
     </div>
 </section>
 
-<!-- ===== SCRIPT CODE ===== -->
+<!-- SCRIPT CODE -->
 <section id="script" class="py-32 px-4 relative overflow-hidden">
     <div class="absolute inset-0 bg-radial-center opacity-40"></div>
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl animate-pulse-soft"></div>
 
     <div class="relative z-10 max-w-4xl mx-auto text-center">
         <span class="text-primary font-bold text-[0.65rem] uppercase tracking-[0.4em] bg-primary/10 px-5 py-2.5 rounded-full border border-primary/20" data-aos="fade-up">One Click Away</span>
         <h2 class="text-5xl md:text-7xl font-black mt-8 mb-10" data-aos="fade-up" data-aos-delay="100">📜 <span class="text-glow">Lấy Script Ngay</span></h2>
 
-        <div class="glass rounded-3xl overflow-hidden shadow-2xl border border-border-glow" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="800">
+        <div class="glass rounded-3xl overflow-hidden shadow-2xl border border-primary/20 animate-border-glow-anim" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="800">
             <div class="bg-dark-200 px-6 py-4 flex items-center gap-3 border-b border-border">
                 <div class="flex gap-2">
-                    <div class="w-3.5 h-3.5 rounded-full bg-red-500/80 shadow-lg shadow-red-500/30"></div>
-                    <div class="w-3.5 h-3.5 rounded-full bg-yellow-500/80 shadow-lg shadow-yellow-500/30"></div>
-                    <div class="w-3.5 h-3.5 rounded-full bg-green-500/80 shadow-lg shadow-green-500/30"></div>
+                    <div class="w-3.5 h-3.5 rounded-full bg-red-500/80 shadow-lg shadow-red-500/30 animate-pulse"></div>
+                    <div class="w-3.5 h-3.5 rounded-full bg-yellow-500/80 shadow-lg shadow-yellow-500/30 animate-pulse" style="animation-delay: 0.2s;"></div>
+                    <div class="w-3.5 h-3.5 rounded-full bg-green-500/80 shadow-lg shadow-green-500/30 animate-pulse" style="animation-delay: 0.4s;"></div>
                 </div>
                 <span class="text-text-dim text-sm ml-3 font-mono tracking-wide">terminal ~ eclipse-phantom</span>
             </div>
             <div class="bg-black/60 p-10 text-left overflow-x-auto backdrop-blur-sm">
-                <pre class="font-mono text-sm md:text-lg leading-relaxed tracking-wide"><span class="text-text-muted">-- Eclipse Phantom Hub v2.0 | by Tzyy.eclipsephantom</span>
-                <span class="text-red-400 font-bold">loadstring</span>(<span class="text-yellow-400 font-semibold">game:HttpGet</span>(<span class="text-primary font-semibold">"https://api.jnkie.com/api/v1/luascripts/public/5a4e7222a9c8481eced3acafd727d381342e9d928f0d90cce11339d409a46671/download"</span>))()<span class="cursor"></span></pre>
+                <pre class="font-mono text-sm md:text-lg leading-relaxed tracking-wide"><span class="text-text-muted">-- Eclipse Phantom Hub v2.0 | Freemium</span>
+<span class="text-text-muted">-- by Tzyy.eclipsephantom</span>
+<span class="text-red-400 font-bold">loadstring</span>(<span class="text-yellow-400 font-semibold">game:HttpGet</span>(<span class="text-primary font-semibold">"https://api.jnkie.com/api/v1/luascripts/public/5a4e7222a9c8481eced3acafd727d381342e9d928f0d90cce11339d409a46671/download"</span>))()<span class="cursor"></span></pre>
             </div>
         </div>
 
         <div class="mt-12" data-aos="fade-up" data-aos-delay="500">
-            <button onclick="copyScript()" class="group relative px-14 py-7 bg-primary hover:bg-primary-600 text-white font-extrabold text-2xl rounded-2xl transition-all duration-500 animate-glow overflow-hidden inline-flex items-center gap-4 shadow-2xl hover:scale-105 active:scale-95">
+            <button onclick="copyScript()" class="group relative px-14 py-7 bg-primary hover:bg-primary-600 text-white font-extrabold text-2xl rounded-2xl transition-all duration-500 animate-glow-strong overflow-hidden inline-flex items-center gap-4 shadow-2xl hover:scale-105 active:scale-95">
                 <span class="relative z-10 flex items-center gap-4"><i class="fas fa-copy group-hover:scale-125 transition-transform duration-300 text-2xl"></i> 📋 Copy Script</span>
                 <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
             </button>
@@ -285,11 +360,11 @@
     </div>
 </section>
 
-<!-- ===== FAQ ===== -->
+<!-- FAQ -->
 <section id="faq" class="py-32 px-4 bg-dark-50 relative">
     <div class="absolute inset-0 bg-grid bg-[length:60px_60px] opacity-20"></div>
     <div class="relative z-10 max-w-3xl mx-auto">
-        <div class="text-center mb-24" data-aos="fade-up">
+        <div class="text-center mb-24" data-aos="fade-up" data-aos-duration="800">
             <span class="text-primary font-bold text-[0.65rem] uppercase tracking-[0.4em] bg-primary/10 px-5 py-2.5 rounded-full border border-primary/20">Got Questions?</span>
             <h2 class="text-5xl md:text-7xl font-black mt-8 mb-8">❓ <span class="text-white">Câu Hỏi Thường Gặp</span></h2>
         </div>
@@ -297,19 +372,19 @@
         <div class="space-y-5" id="faq-list">
             <script>
                 const faqs = [
-                    {q:'🔒 Script có bị phát hiện không?',a:'Script được <strong class="text-white">cập nhật liên tục</strong> để bypass anti-cheat mới nhất. Không có gì đảm bảo 100% – hãy dùng <strong class="text-primary font-semibold">có trách nhiệm</strong>, tránh lộ liễu để bảo vệ tài khoản.'},
-                    {q:'💻 Dùng executor nào?',a:'<strong class="text-white">PC:</strong> KRNL, Fluxus, Solara, Synapse Z<br><strong class="text-white">Mobile:</strong> Delta, Arceus X, Codex, Hydrogen<br><span class="text-text-muted text-sm mt-2 block">⭐ Khuyên dùng <strong class="text-primary">Solara (PC)</strong> & <strong class="text-primary">Delta (Mobile)</strong> vì ổn định nhất.</span>'},
-                    {q:'📱 Có hỗ trợ mobile không?',a:'<strong class="text-primary text-lg">Có!</strong> Script hỗ trợ đầy đủ cả <strong class="text-white">PC & Mobile</strong>. Trên mobile có <strong class="text-white">nút float xanh</strong> kéo thả để ẩn/hiện menu, thay thế phím K trên PC.'},
-                    {q:'🐛 Bị lỗi thì làm sao?',a:'Vào <strong class="text-white">Discord</strong> và báo lỗi qua tab <strong class="text-primary">"Báo Lỗi"</strong> trong script. Admin kiểm tra và fix trong <strong class="text-white">24-48h</strong>. Có thể chat trực tiếp với Owner.'},
-                    {q:'🆓 Script có miễn phí không?',a:'<strong class="text-primary text-xl">100% MIỄN PHÍ!</strong> Nếu ai bán script này cho bạn thì đó là <strong class="text-red-400">LỪA ĐẢO</strong>. Script được phát triển vì đam mê, không vì mục đích thương mại.'}
+                    {q:'🛡️ Script có Antiban không?',a:'Có! Script được <strong class="text-white">tích hợp sẵn Antiban</strong>, tự động bypass anti-cheat mới nhất. Tuy nhiên không gì đảm bảo 100% – hãy dùng <strong class="text-primary font-semibold">có trách nhiệm</strong> để bảo vệ tài khoản. Script được cập nhật thường xuyên để đảm bảo an toàn.'},
+                    {q:'💻 Executor nào được hỗ trợ?',a:'<strong class="text-white">PC:</strong> Solara, Velocity, Madium, Yub-X Hyperion, KRNL, Fluxus<br><strong class="text-white">Mobile:</strong> Delta X (khuyên dùng), Arceus X, Codex<br><span class="text-text-muted text-sm mt-2 block">⭐ Khuyên dùng <strong class="text-primary">Solara (PC)</strong> & <strong class="text-primary">Delta X (Mobile)</strong> vì ổn định và tương thích tốt nhất.</span>'},
+                    {q:'📱 Mobile có sử dụng script được không?',a:'<strong class="text-primary text-lg">Có!</strong> Script hỗ trợ đầy đủ cả <strong class="text-white">PC & Mobile</strong>. Trên mobile có <strong class="text-white">nút float tím</strong> kéo thả để ẩn/hiện menu, thay thế phím K trên PC. Trải nghiệm mượt mà trên cả hai nền tảng.'},
+                    {q:'🐛 Script bị bug thì phải làm sao?',a:'Vào <strong class="text-white">Discord</strong> (<span class="text-primary">discord.gg/mxMTbr9MnD</span>) và báo lỗi qua tab <strong class="text-primary">"Báo Lỗi"</strong> trong script. Admin kiểm tra và fix trong <strong class="text-white">24-48h</strong>. <span class="text-yellow-400 font-semibold">💎 VIP được hỗ trợ ưu tiên.</span>'},
+                    {q:'🆓 Script có miễn phí không?',a:'<strong class="text-primary text-xl">FREEMIUM!</strong> Script miễn phí <strong class="text-white">80% tính năng cơ bản</strong>. <span class="text-yellow-400 font-semibold">💎 20% tính năng VIP</span> (Silent Aim, Auto Farm Full, Auto Câu Cá...) cần mua gói Premium. Nếu ai bán script này giá cao là <strong class="text-red-400">LỪA ĐẢO</strong> – chỉ mua qua kênh chính thức!'}
                 ];
                 document.write(faqs.map((f,i)=>`
-                    <details class="group glass rounded-2xl transition-all duration-500 hover:border-border-glow" data-aos="fade-right" data-aos-delay="${i*80}" data-aos-duration="600">
+                    <details class="group glass rounded-2xl transition-all duration-500 hover:border-primary/40" data-aos="fade-right" data-aos-delay="${i*80}" data-aos-duration="600">
                         <summary class="p-7 md:p-9 cursor-pointer font-bold text-xl flex justify-between items-center text-white select-none">
                             ${f.q}
                             <i class="fas fa-plus group-open:rotate-45 transition-transform duration-300 text-primary text-xl ml-4"></i>
                         </summary>
-                        <div class="px-9 pb-9 text-text-dim text-lg leading-relaxed">${f.a}</div>
+                        <div class="px-9 pb-9 text-text-dim text-lg leading-relaxed animate-fade-in">${f.a}</div>
                     </details>
                 `).join(''));
             </script>
@@ -317,22 +392,24 @@
     </div>
 </section>
 
-<!-- ===== CTA ===== -->
+<!-- CTA -->
 <section class="py-36 px-4 relative overflow-hidden">
     <div class="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-primary/10"></div>
-    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl"></div>
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl animate-pulse-soft"></div>
     <div class="relative z-10 max-w-2xl mx-auto text-center">
-        <div class="text-8xl mb-10 animate-bounce-gentle select-none" data-aos="zoom-in">🚀</div>
+        <div class="text-8xl mb-10 animate-bounce-gentle select-none" data-aos="zoom-in" data-aos-duration="600">🚀</div>
         <h2 class="text-5xl md:text-6xl font-black mb-8" data-aos="fade-up"><span class="text-glow">Sẵn sàng thống trị game?</span></h2>
-        <p class="text-text-dim text-2xl mb-12" data-aos="fade-up" data-aos-delay="100">Tải script + Join <span class="text-primary font-bold">Discord</span> để nhận update sớm nhất!</p>
+        <p class="text-text-dim text-2xl mb-12" data-aos="fade-up" data-aos-delay="100">Tải script Free + Nâng cấp <span class="text-yellow-400 font-bold">💎 Premium</span> để mở khóa toàn bộ!</p>
         <div class="flex flex-col md:flex-row gap-6 justify-center" data-aos="fade-up" data-aos-delay="200">
-            <button onclick="copyScript()" class="px-12 py-6 bg-primary hover:bg-primary-600 text-white font-extrabold text-xl rounded-2xl transition-all duration-500 animate-glow shadow-2xl hover:scale-105 active:scale-95">📋 Get Script Ngay</button>
-            <a href="https://discord.gg/mxMTbr9MnD" target="_blank" class="px-12 py-6 border-2 border-border-glow text-primary hover:bg-primary hover:text-white font-extrabold text-xl rounded-2xl transition-all duration-500 flex items-center justify-center gap-3" style="box-shadow: 0 0 0 1px rgba(168,85,247,0.2), 0 0 30px rgba(168,85,247,0.1);"><i class="fab fa-discord text-2xl"></i> Join Discord</a>
+            <button onclick="copyScript()" class="px-12 py-6 bg-primary hover:bg-primary-600 text-white font-extrabold text-xl rounded-2xl transition-all duration-500 animate-glow-strong shadow-2xl hover:scale-105 active:scale-95">📋 Get Script Free</button>
+            <a href="https://discord.gg/mxMTbr9MnD" target="_blank" class="px-12 py-6 border-2 border-yellow-400/50 text-yellow-400 hover:bg-yellow-400 hover:text-black font-extrabold text-xl rounded-2xl transition-all duration-500 flex items-center justify-center gap-3 hover-lift">
+                <i class="fab fa-discord text-2xl"></i> Mua Premium 💎
+            </a>
         </div>
     </div>
 </section>
 
-<!-- ===== FOOTER ===== -->
+<!-- FOOTER -->
 <footer class="py-16 px-4 border-t border-border text-center relative">
     <div class="absolute inset-0 bg-grid bg-[length:30px_30px] opacity-10"></div>
     <div class="relative z-10">
@@ -340,25 +417,24 @@
         <p class="text-text-dim text-lg mb-3">Made with ❤️ by <span class="text-primary font-bold">Tzyy.eclipsephantom</span></p>
         <p class="text-text-muted text-sm">© 2025 Eclipse Phantom Studios. Not affiliated with Roblox Corporation.</p>
         <div class="flex justify-center gap-8 mt-10">
-            <a href="https://discord.gg/mxMTbr9MnD" target="_blank" class="text-text-dim hover:text-primary transition-colors text-3xl hover:scale-110 transform"><i class="fab fa-discord"></i></a>
-            <a href="#" class="text-text-dim hover:text-primary transition-colors text-3xl hover:scale-110 transform"><i class="fab fa-github"></i></a>
+            <a href="https://discord.gg/mxMTbr9MnD" target="_blank" class="text-text-dim hover:text-primary transition-all duration-300 text-3xl hover:scale-125 transform hover:rotate-12"><i class="fab fa-discord"></i></a>
+            <a href="#" class="text-text-dim hover:text-primary transition-all duration-300 text-3xl hover:scale-125 transform hover:-rotate-12"><i class="fab fa-github"></i></a>
         </div>
     </div>
 </footer>
 
-<!-- ===== SCRIPTS ===== -->
+<!-- SCRIPTS -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-    // Init AOS
-    AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 50 });
+    AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 30 });
 
     const SCRIPT_URL = 'loadstring(game:HttpGet("https://api.jnkie.com/api/v1/luascripts/public/5a4e7222a9c8481eced3acafd727d381342e9d928f0d90cce11339d409a46671/download"))()';
 
-    // Enhanced Particles
+    // Particles
     (() => {
         const container = document.getElementById('particles');
-        const colors = ['#a855f7', '#c084fc', '#e9d5ff', '#9333ea', '#7e22ce'];
-        for (let i = 0; i < 50; i++) {
+        const colors = ['#a855f7', '#c084fc', '#e9d5ff', '#9333ea', '#7e22ce', '#d8b4fe'];
+        for (let i = 0; i < 70; i++) {
             const p = document.createElement('div');
             p.className = 'particle';
             const size = 1.5 + Math.random() * 5;
@@ -370,17 +446,18 @@
                 background:${colors[Math.floor(Math.random()*colors.length)]};
                 animation-delay:${Math.random()*6}s;
                 animation-duration:${3+Math.random()*8}s;
+                box-shadow: 0 0 ${size*2}px ${colors[Math.floor(Math.random()*colors.length)]};
             `;
             container.appendChild(p);
         }
     })();
 
-    // Toast System
+    // Toast
     function showToast(m, t='success') {
         const container = document.getElementById('toast-container');
         const icons = {success:'✅',error:'❌',info:'ℹ️'};
         const toast = document.createElement('div');
-        toast.className = 'toast-enter glass-strong px-7 py-5 rounded-2xl font-bold text-base flex items-center gap-4 shadow-2xl border border-border-glow';
+        toast.className = 'toast-enter glass-strong px-7 py-5 rounded-2xl font-bold text-base flex items-center gap-4 shadow-2xl border border-primary/30';
         toast.innerHTML = `<span class="text-2xl">${icons[t]||'✅'}</span><div><p class="text-white text-lg">${m}</p><p class="text-text-muted text-sm mt-1">Đã copy vào clipboard</p></div>`;
         container.appendChild(toast);
         const remove = () => { toast.classList.add('toast-exit'); setTimeout(() => toast.remove(), 400); };
@@ -388,7 +465,7 @@
         toast.onclick = remove;
     }
 
-    // Copy Script
+    // Copy
     function copyScript() {
         if (navigator.clipboard?.writeText) {
             navigator.clipboard.writeText(SCRIPT_URL).then(() => showToast('Copy script thành công! 🎉')).catch(fallbackCopy);
@@ -404,7 +481,7 @@
         document.body.removeChild(t);
     }
 
-    // Smooth scroll for all anchor links
+    // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -413,14 +490,28 @@
         });
     });
 
-    // Navbar scroll effect
+    // Navbar hide on scroll
+    let lastScroll = 0;
     window.addEventListener('scroll', () => {
-        const nav = document.querySelector('nav');
-        if (window.scrollY > 50) {
-            nav.classList.add('shadow-2xl');
+        const nav = document.getElementById('navbar');
+        const currentScroll = window.scrollY;
+        if (currentScroll > lastScroll && currentScroll > 200) {
+            nav.style.transform = 'translateY(-120%)';
+            nav.style.opacity = '0';
         } else {
-            nav.classList.remove('shadow-2xl');
+            nav.style.transform = 'translateY(0)';
+            nav.style.opacity = '1';
         }
+        lastScroll = currentScroll;
+    });
+
+    // Card mouse glow
+    document.querySelectorAll('.card-premium').forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            card.style.setProperty('--mx', ((e.clientX - rect.left) / rect.width) * 100 + '%');
+            card.style.setProperty('--my', ((e.clientY - rect.top) / rect.height) * 100 + '%');
+        });
     });
 </script>
 </body>
